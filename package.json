@@ -26,7 +26,7 @@
     "bindings": "sencha/node-bindings#find-by-abi",
     "debug": "2",
     "nan": "2",
-    "ref": "sencha/ref#find-by-abi",
+    "ref": "https://github.com/shivar1/refv1.git",
     "ref-struct": "1"
   },
   "devDependencies": {
