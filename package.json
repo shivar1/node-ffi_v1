@@ -1,0 +1,50 @@
+{
+  "name": "ffi",
+  "version": "2.2.0",
+  "license": "MIT",
+  "author": "Rick Branson",
+  "contributors": [
+    "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
+    "Gabor Mezo <gabor.mezo@outlook.com> (https://github.com/unbornchikken)"
+  ],
+  "description": "A foreign function interface (FFI) for Node.js",
+  "keywords": [
+    "foreign",
+    "function",
+    "interface",
+    "ffi",
+    "libffi",
+    "binding",
+    "c"
+  ],
+  "homepage": "http://github.com/sencha/node-ffi",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "main": "./lib/ffi",
+  "dependencies": {
+    "bindings": "sencha/node-bindings#find-by-abi",
+    "debug": "2",
+    "nan": "2",
+    "ref": "sencha/ref#find-by-abi",
+    "ref-struct": "1"
+  },
+  "devDependencies": {
+    "fs-extra": "^0.23.1",
+    "mocha": "*",
+    "ref-array": "1"
+  },
+  "scripts": {
+    "test": "node-gyp rebuild --directory test && mocha -gc --reporter spec",
+    "electron": "node-gyp rebuild --runtime=electron --target=1.4.4 --disturl=https://atom.io/download/atom-shell --build-from-source",
+    "install": "echo",
+    "build": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sencha/node-ffi.git"
+  },
+  "bugs": {
+    "url": "http://github.com/sencha/node-ffi/issues"
+  }
+}
